@@ -1,0 +1,85 @@
+/* Editable Elements Styles */
+.editable {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.editable:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin: -2px -4px;
+}
+
+.editable:hover::after {
+  content: '✏️';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-size: 12px;
+  background: #007bff;
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+.editable.editing {
+  background-color: rgba(0, 123, 255, 0.05);
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin: -2px -4px;
+}
+
+.edit-input {
+  width: 100%;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: inherit;
+  font-family: inherit;
+  background: white;
+  color: inherit;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+}
+
+.edit-input:focus {
+  border-color: #0056b3;
+  box-shadow: 0 2px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Special styles for different editable elements */
+.profile__name.editable:hover,
+.job__position.editable:hover,
+.education__program.editable:hover {
+  background-color: rgba(0, 123, 255, 0.15);
+}
+
+.interest-tag.editable:hover {
+  background-color: rgba(0, 123, 255, 0.2);
+  border-color: #007bff;
+}
+
+.job__duties li.editable:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  border-radius: 4px;
+  padding-left: 8px;
+  margin-left: -8px;
+}
+
+/* Responsive adjustments for editable elements */
+@media (max-width: 768px) {
+  .editable:hover::after {
+    display: none;
+  }
+  
+  .editable:hover {
+    background-color: rgba(0, 123, 255, 0.2);
+  }
+} 

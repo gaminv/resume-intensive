@@ -1,0 +1,72 @@
+/* Footer Section */
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: @gap-lg 0;
+  width: 555px;
+}
+
+.footer__download-btn {
+  background: linear-gradient(135deg, @primary-color, @accent-dark);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: @font-size-md;
+  font-weight: @font-weight-medium;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(40, 217, 121, 0.3);
+}
+
+.footer__download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(40, 217, 121, 0.4);
+  background: linear-gradient(135deg, @accent-dark, @primary-color);
+}
+
+.footer__download-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(40, 217, 121, 0.3);
+}
+
+.download-icon {
+  font-size: 16px;
+}
+
+/* Стили для состояния загрузки */
+.footer__download-btn.loading {
+  background: linear-gradient(135deg, #6c757d, #5a6268);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.footer__download-btn.loading .download-icon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Скрытие footer в PDF */
+@media print {
+  .footer {
+    display: none !important;
+  }
+} 

@@ -1,0 +1,62 @@
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resume {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .resume__header,
+  .resume__experience-block,
+  .resume__education-block {
+    flex-direction: column;
+    width: 100%;
+    gap: @gap-md;
+  }
+
+  .resume__photo,
+  .profile,
+  .languages,
+  .experience,
+  .tools,
+  .education,
+  .interests,
+  .contact {
+    width: 100%;
+  }
+
+  .contact {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact__content {
+    transform: none;
+  }
+
+  .footer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: @gap-md;
+  }
+
+  .resume {
+    gap: @gap-md;
+  }
+
+  .profile__avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .profile__name {
+    font-size: @font-size-lg;
+  }
+
+  .profile__title {
+    font-size: @font-size-md;
+  }
+} 

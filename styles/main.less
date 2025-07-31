@@ -1,0 +1,30 @@
+@import "variables.less";
+@import "normalize.less";
+@import "fonts.less";
+
+body {
+  font-family: @font-main;
+  font-size: @font-size-md;
+  color: @text-color;
+  background-color: @light-bg;
+  line-height: @line-height-default;
+  padding: @section-padding;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.resume {
+  max-width: 555px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Import block styles */
+@import "blocks/header.less";
+@import "blocks/experience.less";
+@import "blocks/education.less";
+@import "blocks/footer.less";
+@import "blocks/editable.less";
+@import "blocks/responsive.less";

@@ -1,0 +1,84 @@
+// Colors
+@primary-color: #28D979;             // зелёные акценты (progress bars, маркеры)
+@highlight-color: #4AB050;           // кнопка "most recent"
+@highlight-text-color: #DDF163;      // текст в кнопке "most recent"
+@accent-dark: #149063;               // дополнительный акцент
+
+@card-bg: #F0F0F0;                   // фон секций и карточек
+@dark-bg: #000000;                   // чёрная секция с email
+@light-bg: #FFFFFF;                  // белый фон или текст
+
+@text-color: #000000;                // основной текст
+@subtext-color: #5C5C5C;             // описание, подписи
+@muted-text: #DDDDDD;                // второстепенный светлый текст
+
+// Typography
+@font-main: 'Poppins', sans-serif;
+
+@font-size-xs: 5px;
+@font-size-sm: 8px;
+@font-size-md: 10px;
+@font-size-lg: 12px;
+@font-size-xl: 14px;
+
+@font-weight-regular: 400;
+@font-weight-medium: 500;
+@font-weight-semibold: 600;
+
+// Line-height
+@line-height-tight: 100%;
+@line-height-default: 150%;
+
+// radius
+@radius-card: 12px;
+@radius-tools: 6px;
+@radius-progress: 3px;
+@radius-none: 0px;
+
+// Layout
+@container-width: 555px;
+@container-height: 812px;
+@section-padding: 24px;
+
+@gap-xxs: 4px;
+@gap-xs: 6px;
+@gap-sm: 10px;
+@gap-md: 12px;
+@gap-lg: 16px;
+@gap-lg2: 20px;
+@gap-xl: 24px;
+
+// Block sizes
+@block-size-small: 124px;
+@block-size-medium: 267px;
+@block-size-large: 411px;
+
+// Mixins
+.block-size(@size) {
+  width: @size;
+  height: @size;
+}
+
+.card-base() {
+  background-color: @card-bg;
+  border-radius: @radius-card;
+  box-sizing: border-box;
+}
+
+.text-base() {
+  font-family: @font-main;
+  color: @text-color;
+  margin: 0;
+}
+
+.flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column() {
+  display: flex;
+  flex-direction: column;
+}
+
