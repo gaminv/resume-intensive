@@ -97,14 +97,58 @@
   height: 11px;
   background-color: @primary-color;
   border-radius: @radius-progress;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.8s ease;
+}
+
+.languages__bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 .languages__bar--high {
-  width: 100%;
+  width: 0%;
+  animation: fillBar 1.5s ease-out 0.3s forwards;
 }
 
 .languages__bar--medium {
-  width: 75%;
+  width: 0%;
+  animation: fillBar 1.5s ease-out 0.6s forwards;
+}
+
+@keyframes fillBar {
+  0% {
+    width: 0%;
+    opacity: 0.5;
+  }
+  100% {
+    width: var(--target-width);
+    opacity: 1;
+  }
+}
+
+.languages__bar--high {
+  --target-width: 100%;
+}
+
+.languages__bar--medium {
+  --target-width: 75%;
 }
 
 

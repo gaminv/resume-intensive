@@ -6,9 +6,9 @@ body {
   font-family: @font-main;
   font-size: @font-size-md;
   color: @text-color;
-  background-color: @light-bg;
+  background-color: @page-bg;
   line-height: @line-height-default;
-  padding: @section-padding;
+  padding: 0;
   margin: 0;
   min-height: 100vh;
 }
@@ -19,6 +19,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  background-color: @light-bg;
+  padding: 24px 20px;
+  min-height: 100vh;
+  box-shadow: 0 0 0 20px @page-bg;
 }
 
 /* Import block styles */
@@ -27,4 +31,5 @@ body {
 @import "blocks/education.less";
 @import "blocks/footer.less";
 @import "blocks/editable.less";
+@import "blocks/reset-button.less";
 @import "blocks/responsive.less";
