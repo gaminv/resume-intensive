@@ -9,6 +9,12 @@
 </head>
 <body>
   <main class="resume">
+    <!-- Кнопка сброса изменений -->
+    <button class="reset-btn" id="resetBtn">
+      <span class="reset-icon">🔄</span>
+      <span>Сбросить изменения</span>
+    </button>
+    
     <!-- Block 1: Header -->
     <div class="resume__header">
       <!-- Profile Photo -->
@@ -17,22 +23,22 @@
       <!-- Profile Info -->
       <section class="resume__profile profile">
         <div class="profile__info">
-          <p class="profile__hello">Hello 👋🏻 I'm</p>
+          <p class="profile__hello" data-id="profile-hello">Hello 👋🏻 I'm</p>
           <div class="profile__bottom-group">
-            <h1 class="profile__name">Karthik SR</h1>
-            <p class="profile__title">UX/UI Designer</p>
+            <h1 class="profile__name" data-id="profile-name">Karthik SR</h1>
+            <p class="profile__title" data-id="profile-title">UX/UI Designer</p>
           </div>
         </div>
       </section>
 
       <!-- Languages Section -->
       <section class="resume__languages languages">
-        <h2 class="languages__title">Languages</h2>
+        <h2 class="languages__title" data-id="languages-title">Languages</h2>
         <div class="languages__item">
           <div class="languages__names">
-            <span class="languages__name">English</span>
-            <span class="languages__name">Malayalam</span>
-            <span class="languages__name">Hindi</span>
+            <span class="languages__name" data-id="language-english">English</span>
+            <span class="languages__name" data-id="language-malayalam">Malayalam</span>
+            <span class="languages__name" data-id="language-hindi">Hindi</span>
           </div>
           <div class="languages__bars">
             <div class="languages__bar languages__bar--high"></div>
@@ -47,55 +53,55 @@
     <div class="resume__experience-block">
       <!-- Experience Section -->
       <section class="resume__experience experience">
-        <h2 class="experience__title">Experience</h2>
+        <h2 class="experience__title" data-id="experience-title">Experience</h2>
 
         <article class="experience__item job job--current">
           <div class="job__header">
-            <span class="job__date">Jun. 2023 - Present</span>
-            <span class="job__badge">most recent</span>
+            <span class="job__date" data-id="job1-date">Jun. 2023 - Present</span>
+            <span class="job__badge" data-id="job1-badge">most recent</span>
           </div>
           <div class="job__content">
             <div class="job__left">
-              <h3 class="job__position">Marketing Manager</h3>
-              <p class="job__company">Pankayam | Full-time</p>
+              <h3 class="job__position" data-id="job1-position">Marketing Manager</h3>
+              <p class="job__company" data-id="job1-company">Pankayam | Full-time</p>
             </div>
             <ul class="job__duties">
-              <li>Strategy development and planning of campaigns that promote the business and generate genuine traffic</li>
-              <li>SEO Content Creation for Blogs, Website, Social media</li>
+              <li data-id="job1-duty1">Strategy development and planning of campaigns that promote the business and generate genuine traffic</li>
+              <li data-id="job1-duty2">SEO Content Creation for Blogs, Website, Social media</li>
             </ul>
           </div>
         </article>
 
         <article class="experience__item job">
           <div class="job__header">
-            <span class="job__date">2017 - Present</span>
+            <span class="job__date" data-id="job2-date">2017 - Present</span>
           </div>
           <div class="job__content">
             <div class="job__left">
-              <h3 class="job__position">Graphic / Web designer</h3>
-              <p class="job__company">Freelance</p>
+              <h3 class="job__position" data-id="job2-position">Graphic / Web designer</h3>
+              <p class="job__company" data-id="job2-company">Freelance</p>
             </div>
             <ul class="job__duties">
-              <li>Development of internal projects from scratch, product design of brands</li>
-              <li>Landing page, webapps and hybrid apps</li>
-              <li>Coordinating with outside agencies, art services, web designer, marketing, printers, and colleagues as necessary.</li>
+              <li data-id="job2-duty1">Development of internal projects from scratch, product design of brands</li>
+              <li data-id="job2-duty2">Landing page, webapps and hybrid apps</li>
+              <li data-id="job2-duty3">Coordinating with outside agencies, art services, web designer, marketing, printers, and colleagues as necessary.</li>
             </ul>
           </div>
         </article>
 
         <article class="experience__item job">
           <div class="job__header">
-            <span class="job__date">Sep. 2021 - Jun. 2023</span>
+            <span class="job__date" data-id="job3-date">Sep. 2021 - Jun. 2023</span>
           </div>
           <div class="job__content">
             <div class="job__left">
-              <h3 class="job__position">Legal Assistant</h3>
-              <p class="job__company">Law Firm | Intern</p>
+              <h3 class="job__position" data-id="job3-position">Legal Assistant</h3>
+              <p class="job__company" data-id="job3-company">Law Firm | Intern</p>
             </div>
             <ul class="job__duties">
-              <li>Provide administrative support to lawyer and enhance office effectiveness</li>
-              <li>Handle communication with clients, witnesses etc.</li>
-              <li>Prepare case briefs and summarize depositions, interrogatories and testimony</li>
+              <li data-id="job3-duty1">Provide administrative support to lawyer and enhance office effectiveness</li>
+              <li data-id="job3-duty2">Handle communication with clients, witnesses etc.</li>
+              <li data-id="job3-duty3">Prepare case briefs and summarize depositions, interrogatories and testimony</li>
             </ul>
           </div>
         </article>
@@ -103,61 +109,87 @@
 
       <!-- Tools Section -->
       <section class="resume__tools tools">
-        <h2 class="tools__title">Tools</h2>
+        <h2 class="tools__title" data-id="tools-title">Tools</h2>
         
         <div class="tools__category">
-          <h3 class="tools__category-title">design</h3>
+          <h3 class="tools__category-title" data-id="tools-category-design">design</h3>
           <div class="tools__icons">
             <div class="tool-icon-wrapper">
-              <img src="assets/icons/figma.svg" alt="Figma" class="tool-icon" />
+              <a href="https://www.figma.com" target="_blank" rel="noopener noreferrer">
+                <img src="assets/icons/figma.svg" alt="Figma" class="tool-icon" />
+              </a>
             </div>
             <div class="tool-icon-wrapper">
-              <img src="assets/icons/photoshop.svg" alt="Photoshop" class="tool-icon" />
+              <a href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noopener noreferrer">
+                <img src="assets/icons/photoshop.svg" alt="Photoshop" class="tool-icon" />
+              </a>
             </div>
             <div class="tool-icon-wrapper">
-              <img src="assets/icons/illustrator.svg" alt="Illustrator" class="tool-icon" />
+              <a href="https://www.adobe.com/products/illustrator.html" target="_blank" rel="noopener noreferrer">
+                <img src="assets/icons/illustrator.svg" alt="Illustrator" class="tool-icon" />
+              </a>
             </div>
             <div class="tool-icon-wrapper">
-              <img src="assets/icons/premiere.svg" alt="Premiere Pro" class="tool-icon" />
+              <a href="https://www.adobe.com/products/premiere.html" target="_blank" rel="noopener noreferrer">
+                <img src="assets/icons/premiere.svg" alt="Premiere Pro" class="tool-icon" />
+              </a>
             </div>
             <div class="tool-icon-wrapper">
-              <img src="assets/icons/notion.svg" alt="Notion" class="tool-icon" />
+              <a href="https://www.notion.so" target="_blank" rel="noopener noreferrer">
+                <img src="assets/icons/notion.svg" alt="Notion" class="tool-icon" />
+              </a>
             </div>
             <div class="tool-icon-wrapper">
-              <img src="assets/icons/meet.svg" alt="Google Meet" class="tool-icon" />
+              <a href="https://meet.google.com" target="_blank" rel="noopener noreferrer">
+                <img src="assets/icons/meet.svg" alt="Google Meet" class="tool-icon" />
+              </a>
             </div>
           </div>
         </div>
 
         <div class="tools__category">
-          <h3 class="tools__category-title">no-code</h3>
+          <h3 class="tools__category-title" data-id="tools-category-nocode">no-code</h3>
           <div class="tools__icons">
             <div class="tool-icon-wrapper">
-              <img src="assets/icons/zapier.svg" alt="Zapier" class="tool-icon" />
+              <a href="https://zapier.com" target="_blank" rel="noopener noreferrer">
+                <img src="assets/icons/zapier.svg" alt="Zapier" class="tool-icon" />
+              </a>
             </div>
             <div class="tool-icon-wrapper">
-              <img src="assets/icons/webflow.svg" alt="Webflow" class="tool-icon" />
+              <a href="https://webflow.com" target="_blank" rel="noopener noreferrer">
+                <img src="assets/icons/webflow.svg" alt="Webflow" class="tool-icon" />
+              </a>
             </div>
             <div class="tool-icon-wrapper">
-              <img src="assets/icons/framer.svg" alt="Framer" class="tool-icon" />
+              <a href="https://www.framer.com" target="_blank" rel="noopener noreferrer">
+                <img src="assets/icons/framer.svg" alt="Framer" class="tool-icon" />
+              </a>
             </div>
             <div class="tool-icon-wrapper">
-              <img src="assets/icons/wordpress.svg" alt="WordPress" class="tool-icon" />
+              <a href="https://wordpress.org" target="_blank" rel="noopener noreferrer">
+                <img src="assets/icons/wordpress.svg" alt="WordPress" class="tool-icon" />
+              </a>
             </div>
           </div>
         </div>
 
         <div class="tools__category">
-          <h3 class="tools__category-title">artificial intelligence</h3>
+          <h3 class="tools__category-title" data-id="tools-category-ai">artificial intelligence</h3>
           <div class="tools__icons">
             <div class="tool-icon-wrapper">
-              <img src="assets/icons/chatgpt.svg" alt="ChatGPT" class="tool-icon" />
+              <a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer">
+                <img src="assets/icons/chatgpt.svg" alt="ChatGPT" class="tool-icon" />
+              </a>
             </div>
             <div class="tool-icon-wrapper">
-              <img src="assets/icons/copilot.svg" alt="Copilot" class="tool-icon" />
+              <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">
+                <img src="assets/icons/copilot.svg" alt="Copilot" class="tool-icon" />
+              </a>
             </div>
             <div class="tool-icon-wrapper">
-              <img src="assets/icons/midjourney.svg" alt="Midjourney" class="tool-icon" />
+              <a href="https://www.midjourney.com" target="_blank" rel="noopener noreferrer">
+                <img src="assets/icons/midjourney.svg" alt="Midjourney" class="tool-icon" />
+              </a>
             </div>
           </div>
         </div>
@@ -168,61 +200,61 @@
 <div class="resume__education-block">
   <!-- Education Section -->
   <section class="resume__education education">
-    <h2 class="education__title">Education</h2>
+            <h2 class="education__title" data-id="education-title">Education</h2>
     <div class="education__items">
       <!-- Current -->
       <article class="education__item education__item--current">
         <div class="education__header">
-          <span class="education__date">2023</span>
+          <span class="education__date" data-id="edu1-date">2023</span>
           <span class="education__heart">
             <img src="assets/icons/heart.svg" alt="Heart" />
           </span>
         </div>
-        <h3 class="education__program">UI/UX</h3>
-        <p class="education__tags">#UX #UI #research #DesignSystem #UI #wireframing #figma #Ux</p>
-        <p class="education__org">Coursera</p>
+        <h3 class="education__program" data-id="edu1-program">UI/UX</h3>
+        <p class="education__tags" data-id="edu1-tags">#UX #UI #research #DesignSystem #UI #wireframing #figma #Ux</p>
+        <p class="education__org" data-id="edu1-org">Coursera</p>
       </article>
       <!-- Past long -->
       <article class="education__item">
         <div class="education__header">
-          <span class="education__date">2017 – 2022</span>
+          <span class="education__date" data-id="edu2-date">2017 – 2022</span>
         </div>
-        <h3 class="education__program">Law</h3>
-        <p class="education__tags">#law #legalStudies #contracts #internationalLaws</p>
-        <p class="education__org">University of Kerala</p>
+        <h3 class="education__program" data-id="edu2-program">Law</h3>
+        <p class="education__tags" data-id="edu2-tags">#law #legalStudies #contracts #internationalLaws</p>
+        <p class="education__org" data-id="edu2-org">University of Kerala</p>
       </article>
       <!-- Full-width -->
       <article class="education__item education__item--full">
         <div class="education__header">
-          <span class="education__date">2017</span>
+          <span class="education__date" data-id="edu3-date">2017</span>
         </div>
-        <h3 class="education__program">Graphic design</h3>
-        <p class="education__tags">#branding #web #illustration #adobe</p>
-        <p class="education__org">Coursera</p>
+        <h3 class="education__program" data-id="edu3-program">Graphic design</h3>
+        <p class="education__tags" data-id="edu3-tags">#branding #web #illustration #adobe</p>
+        <p class="education__org" data-id="edu3-org">Coursera</p>
       </article>
     </div>
   </section>
 
   <!-- Interests + Contact Section -->
   <section class="resume__interests interests">
-    <h2 class="interests__title">Interests</h2>
+    <h2 class="interests__title" data-id="interests-title">Interests</h2>
     <div class="interests__tags">
-      <span class="interest-tag">branding</span>
-      <span class="interest-tag">design</span>
-      <span class="interest-tag">photography</span>
-      <span class="interest-tag">artificial intelligence</span>
-      <span class="interest-tag">illustration</span>
-      <span class="interest-tag">typography</span>
-      <span class="interest-tag">social networks</span>
-      <span class="interest-tag">research</span>
-      <span class="interest-tag">drone pilot</span>
-      <span class="interest-tag">games</span>
+      <span class="interest-tag" data-id="interest-branding">branding</span>
+      <span class="interest-tag" data-id="interest-design">design</span>
+      <span class="interest-tag" data-id="interest-photography">photography</span>
+      <span class="interest-tag" data-id="interest-ai">artificial intelligence</span>
+      <span class="interest-tag" data-id="interest-illustration">illustration</span>
+      <span class="interest-tag" data-id="interest-typography">typography</span>
+      <span class="interest-tag" data-id="interest-social">social networks</span>
+      <span class="interest-tag" data-id="interest-research">research</span>
+      <span class="interest-tag" data-id="interest-drone">drone pilot</span>
+      <span class="interest-tag" data-id="interest-games">games</span>
     </div>
 
     <!-- moved внутрь interests и сделали full-width карточкой -->
     <div class="contact">
-      <p class="contact__text">Let's chat! I'm ready to work on exciting projects</p>
-      <a href="mailto:srkarthik.designscape@gmail.com" class="contact__email">
+      <p class="contact__text" data-id="contact-text">Let's chat! I'm ready to work on exciting projects</p>
+      <a href="mailto:srkarthik.designscape@gmail.com" class="contact__email" data-id="contact-email">
         srkarthik.designscape@gmail.com
       </a>
     </div>
@@ -234,12 +266,13 @@
     <footer class="resume__footer footer">
       <button class="footer__download-btn" id="downloadBtn">
         <span class="download-icon">📄</span>
-        Скачать PDF
+        <span>Скачать PDF</span>
       </button>
     </footer>
   </main>
 
-  <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script type="module" src="scripts/script.js"></script>
 </body>
 </html>

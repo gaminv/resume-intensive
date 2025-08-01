@@ -43,7 +43,7 @@
 }
 
 .job__left {
-  width:32%;
+  width: 33.33%;
 
 }
 
@@ -135,7 +135,7 @@
   position: relative;
   background-color: @light-bg;
   border-radius: @radius-tools;
-  padding: (@gap-sm * 1.5) @gap-sm @gap-sm; 
+  padding: 0 @gap-sm @gap-sm; 
   margin-bottom: @gap-lg;
   width: 61%;
   margin-left: auto;
@@ -148,18 +148,19 @@
 
 .tools__category-title {
   position: absolute;
-  top: 0;                  
+  top: -6px;
   left: 50%;
-  transform: translate(-50%, -50%);  
+  transform: translateX(-50%);
   background-color: #000;            
   color: #fff;                       
-  padding: 0px 6px;                 
   border-radius: 59px;       
   font-size: @font-size-xs;
   font-weight: @font-weight-medium;
-  margin: 0;                         
   text-transform: lowercase;
   white-space: nowrap;
+  padding: 3px 7px;
+  line-height: 1;
+  width: fit-content;
 }
 
 .tools__icons {
@@ -176,14 +177,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tool-icon-wrapper:hover {
+  transform: scale(1.1);
+}
+
+.tool-icon-wrapper a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+.tool-icon {
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.tool-icon-wrapper:hover .tool-icon {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
 /* Если нечетное количество элементов, последний элемент выравниваем под первым элементом */
 .tools__icons:has(.tool-icon-wrapper:nth-child(odd):last-child) .tool-icon-wrapper:last-child {
   margin-left: calc(10% - @gap-sm / 4);
   margin-right: auto;
-}
-
-.tool-icon {
-  display: block;
 } 
